@@ -3,15 +3,13 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import '../styles/globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { inter } from '@styles/fonts'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Adventure Together</title>
+        <title>TWDNEXT</title>
         <meta
           name="description"
           content="A simple project start to work with TypeScript, React, NextJS and Styled Components"
