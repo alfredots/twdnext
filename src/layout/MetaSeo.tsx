@@ -1,12 +1,12 @@
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo'
 
-import DefaultSeoConfig from "../../next-seo.config";
+import DefaultSeoConfig from '../../next-seo.config'
 
 type MetaSeoProps = {
-  title: string;
-  description: string;
-  canonical?: string;
-};
+  title: string
+  description: string
+  canonical?: string
+}
 
 export function MetaSeo(props: MetaSeoProps) {
   return (
@@ -17,8 +17,8 @@ export function MetaSeo(props: MetaSeoProps) {
       openGraph={{
         title: props.title ?? DefaultSeoConfig.title,
         description: props.description ?? DefaultSeoConfig.description,
-        url: props.canonical ?? DefaultSeoConfig.canonical,
+        url: props.canonical ?? DefaultSeoConfig.canonical
       }}
     />
-  );
+  )
 }

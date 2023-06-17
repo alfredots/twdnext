@@ -27,5 +27,5 @@ export function MetaFavicon() {
       />
       <link rel="icon" href={`/assets/seo/favicon.ico`} key="favicon" />
     </>
-  );
+  )
 }

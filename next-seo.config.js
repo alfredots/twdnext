@@ -15,8 +15,8 @@ export default {
         url: '/assets/seo/banner.jpg',
         width: 1200,
         height: 630,
-        alt: '',
-      },
-    ],
-  },
+        alt: ''
+      }
+    ]
+  }
 }
