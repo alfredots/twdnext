@@ -16,7 +16,7 @@ type AssetsProps = {
 
 export const Assets = ({
   name,
-  alt,
+  alt = '',
   width,
   height,
   className,
