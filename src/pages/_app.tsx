@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
