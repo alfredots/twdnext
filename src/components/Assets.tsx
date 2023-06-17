@@ -1,22 +1,22 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import tailwindLogo from 'assets/tailwind-logo.png'
+import tailwindLogo from "assets/tailwind-logo.png";
 
 const assetsPaths = {
   tailwindLogo,
-}
+};
 
 type AssetsProps = {
-  name: keyof typeof assetsPaths
-  alt: ''
-  width: number
-  height: number
-  className?: string
-}
+  name: keyof typeof assetsPaths;
+  alt: "";
+  width: number;
+  height: number;
+  className?: string;
+};
 
 export const Assets = ({
   name,
-  alt = '',
+  alt = "",
   width,
   height,
   className,
@@ -29,5 +29,5 @@ export const Assets = ({
       className={className}
       alt={alt}
     />
-  )
-}
+  );
+};

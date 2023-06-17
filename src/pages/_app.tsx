@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unknown-property */
-import { AppProps } from 'next/app'
-import Head from 'next/head'
+import { AppProps } from "next/app";
+import Head from "next/head";
 
-import '../styles/globals.css'
-import { inter } from '@styles/fonts'
+import "../styles/globals.css";
+import { inter } from "@styles/fonts";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

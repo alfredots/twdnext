@@ -1,12 +1,12 @@
-import { NextSeo } from 'next-seo'
+import { NextSeo } from "next-seo";
 
-import DefaultSeoConfig from '../../next-seo.config'
+import DefaultSeoConfig from "../../next-seo.config";
 
 type MetaSeoProps = {
-  title: string
-  description: string
-  canonical?: string
-}
+  title: string;
+  description: string;
+  canonical?: string;
+};
 
 export function MetaSeo(props: MetaSeoProps) {
   return (
@@ -20,5 +20,5 @@ export function MetaSeo(props: MetaSeoProps) {
         url: props.canonical ?? DefaultSeoConfig.canonical,
       }}
     />
-  )
+  );
 }
