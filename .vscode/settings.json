@@ -1,12 +1,16 @@
 {
-  "editor.formatOnSave": false,
+  "workbench.tree.indent": 16,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "explorer.compactFolders": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "tailwindCSS.experimental.classRegex": [
     "`([^`]*)", // cntl`...`
   ],
-  "tailwindCSS.classAttributes": ["class", "className", "ngClass",".*Class", "Class", ".*Stylesheet", "Stylesheet", ".*Sst", "Sst"]
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass",".*Class", "Class", ".*Stylesheet", "Stylesheet", ".*Sst", "Sst"],
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
 }

@@ -28,7 +28,9 @@
   "plugins": [
     "react",
     "@typescript-eslint",
-    "react-hooks"
+    "react-hooks",
+     "import",
+     "jsx-a11y"
   ],
   "rules": {
     "react/no-unescaped-entities": "off",
@@ -36,7 +38,23 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "import/named": 0,
+    "import/no-named-as-default": 0,
+    "import/no-cycle": "error",
+    "import/no-unresolved": "off",
+    "import/default": "off",
+    "import/no-named-as-default-member": "off",
+    "no-case-declarations": 0,
+    "@typescript-eslint/no-unused-vars": "warn",
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ]
   }
 }
