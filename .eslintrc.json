@@ -11,49 +11,36 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
     "next",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 13,
+   "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "react-hooks",
-     "import",
-     "jsx-a11y"
-  ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "import-helpers"],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "import/named": 0,
-    "import/no-named-as-default": 0,
-    "import/no-cycle": "error",
-    "import/no-unresolved": "off",
-    "import/default": "off",
-    "import/no-named-as-default-member": "off",
-    "no-case-declarations": 0,
-    "@typescript-eslint/no-unused-vars": "warn",
-    "react/react-in-jsx-scope": "off",
-    "import/order": [
-      "error",
+    "import-helpers/order-imports": [
+      "warn",
       {
-        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"],
-        "newlines-between": "always",
-        "alphabetize": { "order": "asc", "caseInsensitive": true }
+        "newlinesBetween": "always",
+        "groups": [
+          ["/^react/", "/^next/"],
+          "module",
+          "absolute",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]
   }

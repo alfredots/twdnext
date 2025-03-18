@@ -13,7 +13,6 @@ class GetUsersService implements GetUsers {
   ) {}
 
   async execute(): Promise<User[]> {
-    console.log('GetUsersService');
     const response = await this.http.request<UserRemoteDTO[]>({
       url: this.url,
       method: 'get'
