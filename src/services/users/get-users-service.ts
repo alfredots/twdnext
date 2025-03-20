@@ -1,7 +1,8 @@
 import { User } from '@/domain/models/user';
 import { GetUsers } from '@/domain/services/get-users.interface';
 import { UserRemoteDTO } from '@/services/dtos/user-remote.dto';
-import { makeAxiosHttpClient } from '@/services/http/http-client';
+import { makeAxiosHttpClient } from '@/services/http/axios-http-client';
+import { makeFetchHttpClient } from '@/services/http/fetch-http-client';
 import { HttpClient, HttpStatusCode } from '@/services/http/http-client-contract';
 import { makeUserMapper, UserMapper } from '@/services/mappers/user.mapper';
 
