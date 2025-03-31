@@ -20,7 +20,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-   "ecmaVersion": "latest",
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "react", "react-hooks", "import-helpers"],
@@ -34,12 +34,7 @@
       "warn",
       {
         "newlinesBetween": "always",
-        "groups": [
-          ["/^react/", "/^next/"],
-          "module",
-          "absolute",
-          ["parent", "sibling", "index"]
-        ],
+        "groups": [["/^react/", "/^next/"], "module", "absolute", ["parent", "sibling", "index"]],
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ]

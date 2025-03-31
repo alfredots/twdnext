@@ -1,5 +1,5 @@
-import { User } from '@/domain/models/user';
-import { GetUsers } from '@/domain/services/get-users.interface';
+import { User } from '@/modules/users/contracts/user';
+import { GetUsers } from '@/modules/users/contracts/get-users.interface';
 import { UserRemoteDTO } from '@/services/dtos/user-remote.dto';
 import { makeAxiosHttpClient } from '@/services/http/axios-http-client';
 import { makeFetchHttpClient } from '@/services/http/fetch-http-client';

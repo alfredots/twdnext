@@ -1,4 +1,4 @@
-import { User } from '@/domain/models/user';
+import { User } from '@/modules/users/contracts/user';
 
 export interface GetUsers {
   execute(): Promise<User[]>;

@@ -1,4 +1,4 @@
-import { User } from '@/domain/models/user';
+import { User } from '@/modules/users/contracts/user';
 import { UserRemoteDTO } from '@/services/dtos/user-remote.dto';
 
 export interface UserMapper {

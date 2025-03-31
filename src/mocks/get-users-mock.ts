@@ -1,5 +1,5 @@
-import { User } from '@/domain/models/user';
-import { GetUsers } from '@/domain/services/get-users.interface';
+import { User } from '@/modules/users/contracts/user';
+import { GetUsers } from '@/modules/users/contracts/get-users.interface';
 
 export const getUsersMock: GetUsers = {
   execute: async (): Promise<User[]> => {

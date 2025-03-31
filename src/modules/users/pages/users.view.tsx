@@ -1,8 +1,7 @@
-import { getUsersModel } from '@/app/users.model';
+import { useUsersModel } from '@/modules/users/pages/users.model';
 
-export const UsersView = (props: Awaited<ReturnType<typeof getUsersModel>>) => {
+export const UsersView = (props: Awaited<ReturnType<typeof useUsersModel>>) => {
   const { users } = props;
-
   return (
     <div>
       <h1 className="text-3xl font-bold  underline">Lista de Usuários</h1>
