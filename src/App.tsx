@@ -1,10 +1,8 @@
 export default function App() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-8">
-      <h1 className="text-4xl font-bold mb-4">
-        React + Vite + Tailwind + TypeScript
-      </h1>
+    <div className="min-h-screen bg-gray-900 p-8 text-white">
+      <h1 className="mb-4 text-4xl font-bold">React + Vite + Tailwind + TypeScript</h1>
       <p className="text-lg">Tudo configurado com sucesso! 🎉</p>
     </div>
-  )
+  );
 }
