@@ -1,10 +1,8 @@
 import { GetUsers } from '@/modules/users/contracts/get-users.interface';
 import { User } from '@/modules/users/contracts/user';
-import { UserRemoteDTO } from '@/services/dtos/user-remote.dto';
-//import { makeAxiosHttpClient } from '@/services/http/axios-http-client';
-import { makeFetchHttpClient } from '@/services/http/fetch-http-client';
-import { HttpClient, HttpStatusCode } from '@/services/http/http-client-contract';
-import { makeUserMapper, UserMapper } from '@/services/mappers/user.mapper';
+import { UserRemoteDTO } from '@/modules/users/services/dtos/user-remote.dto';
+import { makeUserMapper, UserMapper } from '@/modules/users/services/mappers/user.mapper';
+import { HttpClient, HttpStatusCode, makeFetchHttpClient } from '@/packages/http';
 
 class GetUsersService implements GetUsers {
   constructor(

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { HttpClient, HttpRequest, HttpResponse, HttpStatusCode } from '@/services/http/http-client-contract';
+import { HttpClient, HttpRequest, HttpResponse, HttpStatusCode } from '.';
 
-export class FetchHttpClient implements HttpClient {
+class FetchHttpClient implements HttpClient {
   async request<R = any>(data: HttpRequest): Promise<HttpResponse<R>> {
     const { url, method, body, headers } = data;
 
