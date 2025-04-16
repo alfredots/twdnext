@@ -1,5 +1,5 @@
 import { User } from '@/modules/users/contracts/user';
-import { UserRemoteDTO } from '@/services/dtos/user-remote.dto';
+import { UserRemoteDTO } from '@/modules/users/services/dtos/user-remote.dto';
 
 export interface UserMapper {
   toDomain(data: UserRemoteDTO): User;
