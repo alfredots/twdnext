@@ -1,14 +1,15 @@
-import { GetUsers } from '@/modules/users/contracts/get-users.interface';
 import { User } from '@/modules/users/contracts/user';
 import { UserRemoteDTO } from '@/modules/users/services/dtos/user-remote.dto';
-import { makeUserMapper, UserMapper } from '@/modules/users/services/mappers/user.mapper';
+import { makeUserMapper } from '@/modules/users/services/mappers/user.mapper';
+import { endpoints } from '@/modules/users/utils/constants';
+import { Mapper, UseCase } from '@/packages/common';
 import { HttpClient, HttpStatusCode, makeFetchHttpClient } from '@/packages/http';
 
-class GetUsersService implements GetUsers {
+class GetUsersService implements UseCase<void, Promise<User[]>> {
   constructor(
     private readonly url: string,
     private readonly http: HttpClient,
-    private readonly mapper: UserMapper
+    private readonly mapper: Mapper<UserRemoteDTO, User>
   ) {}
 
   async execute(): Promise<User[]> {
@@ -23,7 +24,7 @@ class GetUsersService implements GetUsers {
 
     switch (response.statusCode) {
       case HttpStatusCode.ok:
-        return response.body.map((data) => this.mapper.toDomain(data));
+        return response.body.map((data) => this.mapper.transform(data));
 
       default:
         throw new Error('');
@@ -31,4 +32,4 @@ class GetUsersService implements GetUsers {
   }
 }
 
-export const makeGetUsersService = () => new GetUsersService('https://jsonplaceholder.typicode.com/users', makeFetchHttpClient(), makeUserMapper());
+export const makeGetUsersService = () => new GetUsersService(endpoints.users, makeFetchHttpClient(), makeUserMapper());
