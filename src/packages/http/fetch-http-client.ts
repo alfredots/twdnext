@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { HttpClient, HttpRequest, HttpResponse, HttpStatusCode } from '.';
 
-class FetchHttpClient implements HttpClient {
+export class FetchHttpClient implements HttpClient {
   async request<R = any>(data: HttpRequest): Promise<HttpResponse<R>> {
     const { url, method, body, headers } = data;
 
@@ -29,5 +29,3 @@ class FetchHttpClient implements HttpClient {
     };
   }
 }
-
-export const makeFetchHttpClient = () => new FetchHttpClient();

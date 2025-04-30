@@ -23,7 +23,7 @@ export interface BackendErrorResponse {
   success?: boolean; // Campo opcional, presente no segundo objeto
 }
 
-class AxiosHttpClient implements HttpClient {
+export class AxiosHttpClient implements HttpClient {
   async request<R>(data: HttpRequest): Promise<HttpResponse<R>> {
     let axiosResponse: AxiosResponse;
 

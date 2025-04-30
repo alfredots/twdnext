@@ -1,9 +1,10 @@
-import { User } from '@/modules/users/contracts/user';
-import { UseCase } from '@/packages/common';
-import { useQuery } from '@tanstack/react-query';
+import { useUsersContext } from '@/modules/users/context/users.context';
+import { useQuery } from '@/packages/query';
 
-export const useUsersModel = ({ getUsers }: { getUsers: UseCase<void, Promise<User[]>> }) => {
-  const { data } = useQuery({ queryKey: ['users'], queryFn: () => getUsers.execute() });
+export const useUsersModel = () => {
+  const { services } = useUsersContext();
+  const { getUsersService } = services;
+  const { data } = useQuery({ queryKey: ['users'], queryFn: () => getUsersService.execute() });
 
   return {
     users: data || []

@@ -1,4 +1,4 @@
-import { expect, test } from 'vitest';
+import { expect, test, } from 'vitest';
 
 const sum: (a: number, b: number) => void = (a, b) => a + b;
 

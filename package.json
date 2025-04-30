@@ -1,5 +1,5 @@
 {
-  "name": "twdnext",
+  "name": "gabranth",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,12 +8,14 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "npx vitest"
+    "test": "npx vitest",
+    "start-db": "json-server --watch db.json --port 3000"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.71.1",
     "@tanstack/react-query-devtools": "^5.71.2",
     "axios": "^1.8.4",
+    "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "vite-tsconfig-paths": "^5.1.4"
@@ -42,6 +44,6 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.2"
   }
 }
